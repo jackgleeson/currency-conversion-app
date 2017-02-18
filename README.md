@@ -3,10 +3,12 @@ PHP 7  Currency Conversion App
 
 ## Install
 1. clone the repository
-2. run ```php composer.phar install```
+2. cd /in/to/project/
+3. install composer (https://getcomposer.org/download/)
+4. run ```php composer.phar install```
 
 ## Running application
-1. cd ```/to/project/```
+
 2. chmod +x console.php
 3. ./console.php help
 
