@@ -68,11 +68,14 @@ class ConsoleApplication
     protected function displayConsoleCommandsHelp()
     {
         echo <<<EOT
+        
 Currency Conversion Console App
 
 Available Functions:
 - updateRates
 - convert '\$currency \$amount'
+- convert '\$currency \$amount','\$currency \$amount'
+
 
 EOT;
     }
