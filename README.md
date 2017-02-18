@@ -58,7 +58,8 @@ USD '670.7', USD '229.4'
 2. Use a framework. (see other github projects for example). The brief states PHP script which I interpreted as native script. I hope I was not wrong :(
 3. Add interfaces for command classes
 4. Tidy up CurrencyConversion Service
-5. TDD. Difficult to do in 3 hours.
-6. Check for typos, was in a rush at the end.
-7. Add more comments around usage and class packages
+5. Add PHP 7.1 Return Type Declarations and Argument Type Declarations (see other github projects for example).
+6. TDD. Difficult to do in 3 hours.
+7. Check for typos, was in a rush at the end.
+8. Add more comments around usage and class packages
 
