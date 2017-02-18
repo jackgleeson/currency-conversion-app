@@ -2,8 +2,7 @@
 
 use App\Command\{
     UpdateRatesCommand,
-    ConvertCommand,
-    ConvertCollectionCommand
+    ConvertCommand
 };
 use App\Service\CurrencyConversion\Client;
 use App\Service\CurrencyConversion\Service;
