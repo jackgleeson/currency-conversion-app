@@ -33,9 +33,9 @@ class ConvertCommand
                 foreach (explode(",", $input) as $currencyItem) {
                     list($currency, $amount) = explode(" ", $currencyItem);
                     $rate = $this->Service->getCurrentExchangeRate($currency);
-                    $output .= "'USD " . ($amount * $rate) . "', ";
+                    $output .= "'USD " . ($amount * $rate) . "',";
                 }
-                echo substr($output, 0, -2) . PHP_EOL;
+                echo substr($output, 0, -1) . PHP_EOL;
 
             } else {
                 list($currency, $amount) = explode(" ", $input);

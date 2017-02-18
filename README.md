@@ -60,7 +60,7 @@ PHP 7 Currency Conversion App
 
 #### Result:
 ```
-'USD 670.7', 'USD 229.4'
+'USD 670.7','USD 229.4'
 
 ```
 
