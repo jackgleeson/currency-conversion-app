@@ -26,7 +26,7 @@ class ConvertCommandSpec extends ObjectBehavior
     function it_should_return_command_usage_text_if_no_input_provided()
     {
         $input = null;
-        $this->run($input)->shouldMatch("/^usage: convert(.*)/");
+        $this->run($input)->shouldMatch("/^usage: convert.*/");
     }
 
     function it_should_return_usd_amount_if_currency_amount_provided()
