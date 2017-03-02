@@ -35,17 +35,21 @@ class ConvertCommand
                     $rate = $this->Service->getCurrentExchangeRate($currency);
                     $output .= "'USD " . ($amount * $rate) . "',";
                 }
-                echo substr($output, 0, -1) . PHP_EOL;
+                return substr($output, 0, -1);
 
             } else {
                 list($currency, $amount) = explode(" ", $input);
                 $rate = $this->Service->getCurrentExchangeRate($currency);
-                echo "'USD " . ($amount * $rate) . "" . PHP_EOL;
+                return "'USD " . ($amount * $rate) . "";
             }
 
         } else {
-            echo 'usage: convert \'$currency $amount\'' . PHP_EOL;
-            echo 'usage: convert \'$currency $amount\',\'$currency $amount\'' . PHP_EOL;
+            return <<<EOL
+usage: convert '\$currency \$amount' 
+usage: convert '\$currency \$amount','\$currency \$amount'
+
+EOL;
+
         }
 
     }

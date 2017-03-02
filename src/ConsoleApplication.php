@@ -35,20 +35,23 @@ class ConsoleApplication
         try {
 
             list($cmd, $argument) = $this->getConsoleArguments($input);
+
             if ($cmd == null || $cmd == "help") {
-                return $this->displayConsoleCommandsHelp();
+                $output = $this->displayConsoleCommandsHelp();
+                return $this->printOutput($output);
             }
 
             if ($this->checkSAPI() && $this->commandExists($cmd)) {
                 $ConsoleCommand = $this->container['commands'][$cmd];
                 $cmdClass = $ConsoleCommand['commandClass'];
-                return $this->container[$cmdClass]->run($argument);
+                $output = $this->container[$cmdClass]->run($argument);
+                return $this->printOutput($output);
             }
 
         } catch (ConsoleApplicationException $e) {
-            echo "(Application Exception) " . $e->getMessage() . PHP_EOL;
+            return $this->printOutput("(Application Exception) " . $e->getMessage() . PHP_EOL);
         } catch (\Throwable $e) {
-            echo "(System Error)" . $e->getMessage() . PHP_EOL;
+            return $this->printOutput("(System Error)" . $e->getMessage() . PHP_EOL);
         }
     }
 
@@ -67,7 +70,7 @@ class ConsoleApplication
 
     protected function displayConsoleCommandsHelp()
     {
-        echo <<<EOT
+        return <<<EOT
         
 Currency Conversion Console App
 
@@ -105,5 +108,18 @@ EOT;
         return true;
     }
 
+    /**
+     * @param string $output
+     * @param bool $return
+     */
+    protected function printOutput($output, $return = false)
+    {
+        if ($return === false) {
+            echo $output . PHP_EOL;
+            return;
+        } else {
+            return $output;
+        }
+    }
 
 }

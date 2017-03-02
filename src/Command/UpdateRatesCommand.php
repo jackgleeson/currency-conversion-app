@@ -24,14 +24,16 @@ class UpdateRatesCommand
     public function run()
     {
         $result = $this->Service->getUpdatedRatesFromAPI();
+        $output = '';
         if (count($result) > 0) {
-            echo "--- Rates have been updated from API! ---" . PHP_EOL;
+            $output .= "--- Rates have been updated from API! ---" . PHP_EOL;
             foreach ($result as $currency) {
-                echo "--- " . $currency->currency . " = " . $currency->rate . " ---" . PHP_EOL;
+                $output .= "--- " . $currency->currency . " = " . $currency->rate . " ---" . PHP_EOL;
             }
         } else {
-            echo "--- Unable to pull down rates from API ---" . PHP_EOL;
+            $output .= "--- Unable to pull down rates from API ---" . PHP_EOL;
         }
+        return $output;
     }
 }
 
