@@ -49,9 +49,9 @@ class ConsoleApplication
             }
 
         } catch (ConsoleApplicationException $e) {
-            return $this->printOutput("(Application Exception) " . $e->getMessage() . PHP_EOL);
+            return $this->printOutput("(Application Exception) " . $e->getMessage());
         } catch (\Throwable $e) {
-            return $this->printOutput("(System Error)" . $e->getMessage() . PHP_EOL);
+            return $this->printOutput("(System Error)" . $e->getMessage());
         }
     }
 
