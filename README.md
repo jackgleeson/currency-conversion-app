@@ -22,7 +22,7 @@ PHP 7 Currency Conversion App
 3. ./console.php help
 
 ## Tests
-1. run tests with: ```php bin/phpspec run --format=pretty``` currently failing due to running out of time.
+1. run tests with: ```php bin/phpspec run```
 
 
 ## Example Currency Conversion Commands
