@@ -1,4 +1,4 @@
-# Currency Conversion App
+# Currency Conversion Exercise
 PHP 7 Currency Conversion App
 
 ## Requirements
@@ -65,12 +65,9 @@ PHP 7 Currency Conversion App
 ```
 
 ## Things I would add with more time
-1. Setup tests sooner, ran out of time at the end. Put together using Pimple DI so should be straight forward for to test (with more time).
-2. Use a framework. (see other github projects for example). The brief states PHP script which I interpreted as native script. I hope I was not wrong :(
-3. Add interfaces for command classes
+1. Setup tests sooner
+2. Use a framework
+3. Add interface for command classes
 4. Tidy up CurrencyConversion Service
-5. Add PHP 7.1 Return Type Declarations and Argument Type Declarations (see other github projects for example).
-6. TDD. Difficult to do in 3 hours.
-7. Check for typos, was in a rush at the end.
-8. Add more comments around usage and class packages
+5. Add PHP 7.1 Return Type Declarations and Argument Type Declarations 
 
