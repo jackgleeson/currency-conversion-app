@@ -15,7 +15,7 @@ PHP 7 Currency Conversion App
 1. create mysql dastabase ```demo```
 2. create user ```CREATE USER 'demo_user'@'localhost' IDENTIFIED BY 'demo_password';```
 3. grant privileges ```GRANT ALL PRIVILEGES ON demo.* TO 'demo_user'@'localhost';```
-3. run ```mysql -u demo_user -p demo < table.sql```
+3. run ```mysql -u demo_user --password=demo_password < table.sql```
 
 ## Running application
 2. chmod +x console.php
@@ -65,9 +65,8 @@ PHP 7 Currency Conversion App
 ```
 
 ## Things I would add with more time
-1. Setup tests sooner
-2. Use a framework
-3. Add interface for command classes
-4. Tidy up CurrencyConversion Service
-5. Add PHP 7.1 Return Type Declarations and Argument Type Declarations 
+1. Add interface for command classes
+2. Tidy up CurrencyConversion Service
+3. Add PHP 7.1 Return Type Declarations and Argument Type Declarations 
+4. More tests!
 
